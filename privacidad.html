@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es-CR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad | Atemporal</title>
+<meta name="description" content="Cómo Atemporal recopila, usa y protege los datos personales de sus clientes y contactos, conforme a la Ley N.° 8968 de Costa Rica.">
+<link rel="canonical" href="https://atemporal-cr.com/privacidad.html">
+<meta name="theme-color" content="#F1E6D0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23F1E6D0'/%3E%3Cpath d='M8 26V7l16 4.5V26' fill='none' stroke='%23A13D2D' stroke-width='3'/%3E%3Cpath d='M4 26.5h24' stroke='%231E1E1E' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+  :root {
+    --arena: #F1E6D0;
+    --arena-clara: #F8F2E6;
+    --terroso: #D4BFA0;
+    --tierra: #A13D2D;
+    --carbon: #1E1E1E;
+    --carbon-suave: #51483F;
+    --linea: 1.5px;
+    --ancho: 76rem;
+    --margen: clamp(1.25rem, 4vw, 3rem);
+    --fuente: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  body {
+    margin: 0;
+    background: var(--arena);
+    color: var(--carbon);
+    font-family: var(--fuente);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  svg { display: block; }
+  a { color: inherit; text-decoration-color: var(--tierra); text-decoration-thickness: 2px; text-underline-offset: .22em; }
+  h1, h2 { margin: 0; font-weight: 620; font-stretch: 125%; line-height: 1.08; letter-spacing: -0.015em; text-wrap: balance; }
+  p, ul { margin: 0; }
+  :focus-visible { outline: 3px solid var(--carbon); outline-offset: 3px; }
+  .contenedor { width: 100%; max-width: var(--ancho); margin-inline: auto; padding-inline: var(--margen); }
+  .saltar {
+    position: absolute; left: var(--margen); top: -4rem; z-index: 20;
+    padding: .6rem 1rem; background: var(--carbon); color: var(--arena-clara); text-decoration: none;
+  }
+  .saltar:focus { top: .75rem; }
+
+  .encabezado { position: sticky; top: 0; z-index: 10; background: var(--arena); border-bottom: var(--linea) solid var(--carbon); }
+  .encabezado__fila { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 4.5rem; }
+  .marca { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; }
+  .marca__simbolo { width: 1.75rem; height: 1.75rem; flex: none; }
+  .marca__nombre { font-size: 1.3125rem; font-weight: 700; font-stretch: 125%; letter-spacing: -0.02em; line-height: 1; }
+  .volver { font-weight: 500; }
+
+  .documento { padding-block: clamp(3rem, 7vw, 5.5rem) clamp(4rem, 8vw, 6rem); }
+  .documento__cabeza { padding-bottom: 2rem; margin-bottom: 2.5rem; border-bottom: var(--linea) solid var(--carbon); }
+  .documento h1 { font-size: clamp(2.3rem, 1.3rem + 3.4vw, 3.75rem); line-height: 1.02; }
+  .documento__fecha { margin-top: 1rem; color: var(--carbon-suave); }
+  .documento__cuerpo { max-width: 42rem; }
+  .documento__cuerpo > p + p { margin-top: 1em; }
+  .documento h2 { margin: 2.75rem 0 .75rem; font-size: 1.375rem; font-stretch: 115%; line-height: 1.2; scroll-margin-top: 5.5rem; }
+  .documento ul { margin-top: .75rem; padding-left: 1.25rem; }
+  .documento ul + p { margin-top: 1em; }
+  .documento li + li { margin-top: .45rem; }
+  .documento li::marker { color: var(--tierra); }
+  .documento__intro { font-size: 1.1875rem; line-height: 1.55; }
+
+  .cajetin { padding-block: 2.5rem 3rem; }
+  .cajetin__tabla {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, .8fr);
+    grid-template-areas:
+      "marca razon cedula docs"
+      "marca domicilio contacto lamina";
+    gap: 1px; background: var(--carbon); border: var(--linea) solid var(--carbon);
+  }
+  .celda { display: flex; flex-direction: column; gap: .3rem; min-width: 0; padding: .85rem 1rem 1rem; background: var(--arena); }
+  .celda--marca { grid-area: marca; justify-content: space-between; gap: 1.5rem; }
+  .celda--razon { grid-area: razon; }
+  .celda--cedula { grid-area: cedula; }
+  .celda--domicilio { grid-area: domicilio; }
+  .celda--contacto { grid-area: contacto; }
+  .celda--docs { grid-area: docs; }
+  .celda--lamina { grid-area: lamina; }
+  .celda__etiqueta { font-size: .8125rem; line-height: 1.3; color: var(--carbon-suave); }
+  .celda__valor { font-weight: 500; line-height: 1.4; overflow-wrap: anywhere; }
+  .cajetin__nota { margin-top: 1rem; font-size: .875rem; color: var(--carbon-suave); }
+  @media (max-width: 900px) {
+    .cajetin__tabla {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas: "marca marca" "razon cedula" "domicilio contacto" "docs lamina";
+    }
+  }
+  @media (max-width: 560px) {
+    .cajetin__tabla { grid-template-columns: 1fr; grid-template-areas: none; }
+    .cajetin__tabla > .celda { grid-area: auto; }
+  }
+</style>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="encabezado">
+  <div class="contenedor encabezado__fila">
+    <a class="marca" href="index.html" aria-label="Atemporal, ir al inicio">
+      <svg class="marca__simbolo" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 26V7l16 4.5V26" fill="none" stroke="#A13D2D" stroke-width="3"/><path d="M3 26.5h26" stroke="#1E1E1E" stroke-width="2.5"/></svg>
+      <span class="marca__nombre">Atemporal</span>
+    </a>
+    <a class="volver" href="index.html">Volver al inicio</a>
+  </div>
+</header>
+
+<main id="contenido" class="documento">
+  <div class="contenedor">
+    <div class="documento__cabeza">
+      <h1>Política de privacidad</h1>
+      <p class="documento__fecha">Última actualización: 21 de septiembre de 2026</p>
+    </div>
+
+    <div class="documento__cuerpo">
+      <p class="documento__intro">En Atemporal cuidamos la información que usted nos comparte. Esta política explica qué datos recopilamos, para qué los usamos y cómo puede ejercer sus derechos, de acuerdo con la Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales, N.° 8968.</p>
+
+      <h2 id="responsable">Quién es responsable de sus datos</h2>
+      <p>La responsable del tratamiento de sus datos personales es 3-102-960054 Sociedad de Responsabilidad Limitada, cédula jurídica 3-102-960054, que opera con el nombre comercial Atemporal y tiene su domicilio en Heredia, Mercedes Norte, del Colegio Claretiano 300&nbsp;m al este y 100&nbsp;m al norte. Puede contactarnos en <a href="mailto:{{CORREO}}">{{CORREO}}</a> o al <a href="tel:+{{WHATSAPP}}">{{TELEFONO}}</a>.</p>
+
+      <h2 id="datos">Qué datos recopilamos</h2>
+      <p>Solo los que usted nos da al comunicarse con nosotros por WhatsApp, teléfono o correo electrónico: su nombre, número de teléfono y correo; la ubicación del terreno o la propiedad; y la descripción, fotos o planos que comparta sobre su proyecto. Si nos contrata, también los datos necesarios para el contrato y la facturación electrónica.</p>
+
+      <h2 id="usos">Para qué los usamos</h2>
+      <ul>
+        <li>Responder sus consultas y coordinar visitas.</li>
+        <li>Preparar propuestas y presupuestos.</li>
+        <li>Diseñar, tramitar y ejecutar su proyecto si nos contrata.</li>
+        <li>Cumplir obligaciones legales, contables y tributarias.</li>
+      </ul>
+      <p>No le enviaremos publicidad sin su consentimiento.</p>
+
+      <h2 id="terceros">Con quién los compartimos</h2>
+      <p>No vendemos ni alquilamos sus datos. Solo los compartimos cuando el proyecto o la ley lo requieren:</p>
+      <ul>
+        <li>Profesionales y proveedores que participan en su obra, en la medida necesaria.</li>
+        <li>El CFIA, la municipalidad u otras instituciones, para los trámites que usted nos encargue.</li>
+        <li>Proveedores de servicios que usamos para comunicarnos y guardar información, como Meta Platforms (WhatsApp) y Google (correo y documentos). Estos proveedores pueden almacenar la información en servidores fuera de Costa Rica.</li>
+        <li>Autoridades, cuando una ley u orden judicial lo exija.</li>
+      </ul>
+
+      <h2 id="base-legal">Base legal</h2>
+      <p>Tratamos sus datos con base en el consentimiento que usted otorga al contactarnos y, cuando nos contrata, en la necesidad de cumplir el contrato. Puede revocar su consentimiento en cualquier momento.</p>
+
+      <h2 id="conservacion">Cuánto tiempo los conservamos</h2>
+      <p>Mientras dure nuestra relación y durante el plazo que exijan las obligaciones legales, tributarias o de garantía de la obra. Si su consulta no se convierte en un proyecto, eliminamos sus datos en un plazo máximo de 12 meses.</p>
+
+      <h2 id="derechos">Sus derechos</h2>
+      <p>Puede pedirnos en cualquier momento acceso a sus datos, su rectificación o su eliminación escribiendo a <a href="mailto:{{CORREO}}">{{CORREO}}</a>. Atenderemos su solicitud de forma gratuita en un plazo máximo de cinco días hábiles. Si considera que no la atendimos correctamente, puede acudir a la Agencia de Protección de Datos de los Habitantes (PRODHAB).</p>
+
+      <h2 id="eliminacion-de-datos">Cómo pedir la eliminación de sus datos</h2>
+      <p>Para que eliminemos sus datos, incluidas las conversaciones que haya tenido con nosotros por WhatsApp, escriba a <a href="mailto:{{CORREO}}?subject=Eliminar%20mis%20datos">{{CORREO}}</a> con el asunto «Eliminar mis datos» e indique el número de teléfono o el correo con el que nos contactó. Le confirmaremos la eliminación por el mismo medio. Solo conservaremos la información que la ley nos obligue a guardar.</p>
+
+      <h2 id="seguridad">Seguridad</h2>
+      <p>Aplicamos medidas técnicas y organizativas razonables para proteger sus datos contra pérdida, uso indebido o acceso no autorizado, y limitamos el acceso a las personas que lo necesitan para atender su proyecto.</p>
+
+      <h2 id="sitio-web">Este sitio web</h2>
+      <p>Este sitio no tiene formularios, no usa cookies propias y no incluye herramientas de analítica ni de publicidad. Se aloja en GitHub Pages y carga tipografías desde Google Fonts; al visitarlo, esos servicios pueden registrar datos técnicos como su dirección IP, según sus propias políticas.</p>
+
+      <h2 id="cambios">Cambios a esta política</h2>
+      <p>Si actualizamos esta política, publicaremos la nueva versión en esta página con su fecha de actualización.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="cajetin">
+  <div class="contenedor">
+    <div class="cajetin__tabla">
+      <div class="celda celda--marca">
+        <span class="marca">
+          <svg class="marca__simbolo" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 26V7l16 4.5V26" fill="none" stroke="#A13D2D" stroke-width="3"/><path d="M3 26.5h26" stroke="#1E1E1E" stroke-width="2.5"/></svg>
+          <span class="marca__nombre">Atemporal</span>
+        </span>
+        <span class="celda__valor">Diseño y construcción<br>Heredia, Costa Rica</span>
+      </div>
+      <div class="celda celda--razon">
+        <span class="celda__etiqueta">Razón social</span>
+        <span class="celda__valor">3-102-960054 Sociedad de Responsabilidad Limitada</span>
+      </div>
+      <div class="celda celda--cedula">
+        <span class="celda__etiqueta">Cédula jurídica</span>
+        <span class="celda__valor">3-102-960054</span>
+      </div>
+      <div class="celda celda--domicilio">
+        <span class="celda__etiqueta">Domicilio</span>
+        <span class="celda__valor">Heredia, Mercedes Norte, del Colegio Claretiano 300&nbsp;m al este y 100&nbsp;m al norte</span>
+      </div>
+      <div class="celda celda--contacto">
+        <span class="celda__etiqueta">Contacto</span>
+        <span class="celda__valor"><a href="mailto:{{CORREO}}">{{CORREO}}</a><br><a href="tel:+{{WHATSAPP}}">{{TELEFONO}}</a></span>
+      </div>
+      <div class="celda celda--docs">
+        <span class="celda__etiqueta">Documentos</span>
+        <span class="celda__valor"><a href="privacidad.html" aria-current="page">Política de privacidad</a></span>
+      </div>
+      <div class="celda celda--lamina">
+        <span class="celda__etiqueta">Lámina</span>
+        <span class="celda__valor">2 de 2</span>
+      </div>
+    </div>
+    <p class="cajetin__nota">© 2026 3-102-960054 Sociedad de Responsabilidad Limitada, que opera con el nombre comercial Atemporal.</p>
+  </div>
+</footer>
+</body>
+</html>
